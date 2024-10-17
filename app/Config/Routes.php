@@ -16,3 +16,4 @@ $routes->post('customer/update/(:num)', 'Customer::update/$1'); // Route untuk m
 $routes->delete('customer/delete/(:num)', 'Customer::delete/$1');
 $routes->post('customer/update/(:num)', 'Transaksi::update/$1'); // Route untuk mengupdate data berdasarkan id
 $routes->get('/customer/data-customer', 'Customer::getCustomerDataJson'); // Route untuk mengit add gitdapatkan data Customer dalam format JSON
+ 

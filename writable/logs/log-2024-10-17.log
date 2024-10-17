@@ -1,0 +1,160 @@
+CRITICAL - 2024-10-17 03:02:05 --> Error: Class "App\Models\CustomerModel" not found
+[Method: GET, Route: customer/data]
+in APPPATH\Controllers\Customer.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Customer->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\customerserver\\public\\index.php')
+CRITICAL - 2024-10-17 03:03:23 --> Error: Class "App\Models\CustomerModel" not found
+[Method: GET, Route: customer/data]
+in APPPATH\Controllers\Customer.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Customer->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\customerserver\\public\\index.php')
+CRITICAL - 2024-10-17 03:17:56 --> Error: Class "App\Models\CustomerModel" not found
+[Method: GET, Route: customer/data]
+in APPPATH\Controllers\Customer.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Customer->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\customerserver\\public\\index.php')
+CRITICAL - 2024-10-17 03:18:00 --> Error: Class "App\Models\CustomerModel" not found
+[Method: GET, Route: customer/data]
+in APPPATH\Controllers\Customer.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Customer->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\customerserver\\public\\index.php')
+CRITICAL - 2024-10-17 03:18:02 --> Error: Class "App\Models\CustomerModel" not found
+[Method: GET, Route: customer/data]
+in APPPATH\Controllers\Customer.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Customer->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\customerserver\\public\\index.php')
+CRITICAL - 2024-10-17 03:19:11 --> Error: Class "App\Models\CustomerModel" not found
+[Method: GET, Route: customer/data]
+in APPPATH\Controllers\Customer.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Customer->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\customerserver\\public\\index.php')
+CRITICAL - 2024-10-17 03:41:41 --> Error: Class "App\Models\CustomerModel" not found
+[Method: GET, Route: customer]
+in APPPATH\Controllers\Customer.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Customer->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\customerserver\\public\\index.php')
+CRITICAL - 2024-10-17 03:54:58 --> Error: Class "App\Models\CustomerModel" not found
+[Method: GET, Route: customer/data-customer]
+in APPPATH\Controllers\Customer.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Customer->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\customerserver\\public\\index.php')
+CRITICAL - 2024-10-17 03:56:28 --> Error: Class "App\Models\CustomerModel" not found
+[Method: GET, Route: customer/data-customer]
+in APPPATH\Controllers\Customer.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Customer->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\customerserver\\public\\index.php')
+CRITICAL - 2024-10-17 03:58:26 --> Error: Class "App\Models\CustomerModel" not found
+[Method: GET, Route: customer/data-customer]
+in APPPATH\Controllers\Customer.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Customer->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\customerserver\\public\\index.php')
+CRITICAL - 2024-10-17 04:05:28 --> Error: Class "App\Models\CustomerModel" not found
+[Method: GET, Route: customer/data-customer]
+in APPPATH\Controllers\Customer.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Customer->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\customerserver\\public\\index.php')
+CRITICAL - 2024-10-17 04:05:34 --> Error: Class "App\Models\CustomerModel" not found
+[Method: GET, Route: customer/data-customer]
+in APPPATH\Controllers\Customer.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Customer->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\customerserver\\public\\index.php')
+CRITICAL - 2024-10-17 04:09:05 --> Error: Class "App\Models\CustomerModel" not found
+[Method: GET, Route: customer/data-customer]
+in APPPATH\Controllers\Customer.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Customer->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\customerserver\\public\\index.php')
+CRITICAL - 2024-10-17 04:09:11 --> Error: Class "App\Models\CustomerModel" not found
+[Method: GET, Route: customer/data-customer]
+in APPPATH\Controllers\Customer.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Customer->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\customerserver\\public\\index.php')
+CRITICAL - 2024-10-17 04:09:17 --> Error: Class "App\Models\CustomerModel" not found
+[Method: GET, Route: customer/data-customer]
+in APPPATH\Controllers\Customer.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Customer->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\customerserver\\public\\index.php')
+CRITICAL - 2024-10-17 04:10:48 --> Error: Class "App\Controllers\CustomerModel" not found
+[Method: GET, Route: customer/data-customer]
+in APPPATH\Controllers\Customer.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Customer->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\customerserver\\public\\index.php')

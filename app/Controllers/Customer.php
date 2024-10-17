@@ -2,125 +2,135 @@
 
 namespace App\Controllers;
 
-use App\Models\CustomerModel;
-use CodeIgniter\RESTful\ResourceController;
-
-class Customer extends ResourceController
+class Customer extends BaseController
 {
-    protected $customerModel;
-
-    public function __construct()
-    {
-        $this->customerModel = new CustomerModel();
-    }
-
+    // Fungsi untuk menampilkan semua data customer
     public function index()
     {
-        $data_customer = $this->customerModel->findAll();
-        return $this->respond($data_customer, 200, ['Content-Type' => 'application/json']);
+        $url = 'http://10.10.25.13:8080/customer/data';  // Ubah URL API jika perlu
+        $client = \Config\Services::curlrequest();
+
+        try {
+            $response = $client->request('GET', $url);
+            $data['customer'] = json_decode($response->getBody(), true);
+
+            return view('customer', $data);  // View untuk menampilkan data customer
+        } catch (\Exception $e) {
+            return view('customer', ['error' => $e->getMessage()]);
+        }
     }
 
-    public function create()
+    // Fungsi untuk menampilkan form tambah data customer
+    public function tambahCustomer()
     {
-        $input_data = $this->request->getJSON(true);
-        if ($input_data) {
-            $data = [
-                'nik_customer'   => $input_data['nik_customer'] ?? '',
-                'nama_customer'  => $input_data['nama_customer'] ?? '',
-                'jenis_kelamin'  => $input_data['jenis_kelamin'] ?? '',
-                'pekerjaan'      => $input_data['pekerjaan'] ?? '',
-                'nomor_telepon'  => $input_data['nomor_telepon'] ?? '',
-                'alamat'         => $input_data['alamat'] ?? '',
-                'email'          => $input_data['email'] ?? '',
-                'created_at'     => date('Y-m-d H:i:s') // Assuming auto timestamp for creation
-            ];
+        return view('input-customer');  // View untuk menampilkan form tambah customer
+    }
 
-            if ($this->customerModel->saveCustomer($data)) {
-                return $this->respondCreated(
-                    ['status' => 'success', 'message' => 'Customer berhasil ditambahkan']
-                )->setContentType('application/json');
+    // Fungsi untuk mengirim data customer ke API (Create)
+    public function sendData()
+    {
+        $data = [
+            'nik_customer' => $this->request->getPost('nik_customer'),
+            'nama_customer' => $this->request->getPost('nama_customer'),
+            'jenis_kelamin' => $this->request->getPost('jenis_kelamin'),
+            'pekerjaan' => $this->request->getPost('pekerjaan'),
+            'nomor_telepon' => $this->request->getPost('nomor_telepon'),
+            'alamat' => $this->request->getPost('alamat'),
+            'email' => $this->request->getPost('email'),
+        ];
+
+        $url = 'http://10.10.25.13:8080/customer/data';  // URL API tujuan
+        $ch = curl_init($url);
+
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+
+        $response = curl_exec($ch);
+
+        if (curl_errno($ch)) {
+            echo 'Error: ' . curl_error($ch);
+        } else {
+            $http_status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+            if ($http_status == 200) {
+                return redirect()->to('/customer')->with('success', 'Data customer berhasil disimpan!');
             } else {
-                return $this->fail(
-                    'Gagal menambah customer', 
-                    400
-                )->setContentType('application/json');
+                return redirect()->to('/customer')->with('error', 'Gagal menyimpan data customer! Kode Status: ' . $http_status);
             }
-        } else {
-            return $this->fail(
-                'Invalid JSON input', 
-                400
-            )->setContentType('application/json');
+        }
+
+        curl_close($ch);
+    }
+
+    // Fungsi untuk menampilkan data customer yang akan diedit
+    public function edit($id)
+    {
+        $url = 'http://10.10.25.13:8080/customer/data/' . $id;  // URL API untuk mendapatkan data berdasarkan ID
+        $client = \Config\Services::curlrequest();
+
+        try {
+            $response = $client->request('GET', $url);
+            $data['customer'] = json_decode($response->getBody(), true);
+
+            if (!$data['customer']) {
+                return redirect()->to('/customer')->with('error', 'Customer tidak ditemukan.');
+            }
+
+            return view('edit-customer', $data);  // View untuk edit customer
+        } catch (\Exception $e) {
+            return view('edit-customer', ['error' => $e->getMessage()]);
         }
     }
 
-    public function show($id = null)
+    // Fungsi untuk mengirim perubahan data customer ke API (Update)
+    public function editCustomer()
     {
-        $customer = $this->customerModel->getCustomerById($id);
+        $data = [
+            'id_customer' => $this->request->getPost('id_customer'),
+            'nik_customer' => $this->request->getPost('nik_customer'),
+            'nama_customer' => $this->request->getPost('nama_customer'),
+            'jenis_kelamin' => $this->request->getPost('jenis_kelamin'),
+            'pekerjaan' => $this->request->getPost('pekerjaan'),
+            'nomor_telepon' => $this->request->getPost('nomor_telepon'),
+            'alamat' => $this->request->getPost('alamat'),
+            'email' => $this->request->getPost('email'),
+        ];
 
-        if ($customer) {
-            return $this->response->setJSON($customer);
-        } else {
-            return $this->failNotFound('Customer tidak ditemukan');
-        }
-    }
+        $url = 'http://10.10.25.13:8080/customer/data';  // URL API untuk update data
+        $client = \Config\Services::curlrequest();
 
-    public function getCustomer()
-    {
-        $customers = $this->customerModel->getCustomer();
-        return $this->response->setJSON($customers);
-    }
+        try {
+            $response = $client->setBody(json_encode($data))
+                               ->setHeader('Content-Type', 'application/json')
+                               ->request('PUT', $url);
 
-    public function update($id = null)
-    {
-        $input_data = $this->request->getJSON(true);
-
-        if ($input_data) {
-            $data = [
-                'nik_customer'   => $input_data['nik_customer'] ?? '',
-                'nama_customer'  => $input_data['nama_customer'] ?? '',
-                'jenis_kelamin'  => $input_data['jenis_kelamin'] ?? '',
-                'pekerjaan'      => $input_data['pekerjaan'] ?? '',
-                'nomor_telepon'  => $input_data['nomor_telepon'] ?? '',
-                'alamat'         => $input_data['alamat'] ?? '',
-                'email'          => $input_data['email'] ?? '',
-            ];
-
-            if ($this->customerModel->updateCustomer($id, $data)) {
-                return $this->respond(
-                    ['status' => 'success', 'message' => 'Customer berhasil diperbarui'], 
-                    200, 
-                    ['Content-Type' => 'application/json']
-                );
+            if ($response->getStatusCode() == 200) {
+                return redirect()->to('/customer')->with('success', 'Customer berhasil diperbarui!');
             } else {
-                return $this->fail(
-                    'Gagal memperbarui customer', 
-                    400, 
-                    ['Content-Type' => 'application/json']
-                );
+                return redirect()->to('/customer')->with('error', 'Gagal memperbarui customer!');
             }
-        } else {
-            return $this->fail(
-                'Invalid JSON input', 
-                400, 
-                ['Content-Type' => 'application/json']
-            );
+        } catch (\Exception $e) {
+            echo 'Error: ' . $e->getMessage();
         }
     }
 
-    public function delete($id = null)
+    // Fungsi untuk menghapus data customer (Delete)
+    public function hapus($id)
     {
-        if ($this->customerModel->deleteCustomer($id)) {
-            return $this->respondDeleted(
-                ['status' => 'success', 'message' => 'Customer berhasil dihapus'], 
-                200, 
-                ['Content-Type' => 'application/json']
-            );
-        } else {
-            return $this->fail(
-                'Gagal menghapus customer', 
-                400, 
-                ['Content-Type' => 'application/json']
-            );
+        $url = 'http://10.10.25.13:8080/customer/data/' . $id;  // URL API untuk menghapus data berdasarkan ID
+        $client = \Config\Services::curlrequest();
+
+        try {
+            $response = $client->request('DELETE', $url);
+
+            if ($response->getStatusCode() == 200) {
+                return redirect()->to('/customer')->with('success', 'Customer berhasil dihapus!');
+            } else {
+                return redirect()->to('/customer')->with('error', 'Gagal menghapus customer!');
+            }
+        } catch (\Exception $e) {
+            return redirect()->to('/customer')->with('error', $e->getMessage());
         }
     }
 }
