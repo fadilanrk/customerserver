@@ -158,3 +158,46 @@ in APPPATH\Controllers\Customer.php on line 15.
  5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
  7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\customerserver\\public\\index.php')
+CRITICAL - 2024-10-17 04:43:35 --> ErrorException: Maximum execution time of 60 seconds exceeded
+[Method: GET, Route: customer/data-customer]
+in SYSTEMPATH\HTTP\CURLRequest.php on line 691.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-10-17 04:44:16 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "customer.php"
+[Method: GET, Route: customer/data-customer]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('customer.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('customer', [], true)
+ 3 APPPATH\Controllers\Customer.php(19): view('customer', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customer->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customer))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\customerserver\\public\\index.php')
+CRITICAL - 2024-10-17 04:55:08 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "customer.php"
+[Method: GET, Route: customer/data-customer]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('customer.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('customer', [], true)
+ 3 APPPATH\Controllers\Customer.php(19): view('customer', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customer->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customer))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\customerserver\\public\\index.php')
+CRITICAL - 2024-10-17 04:58:01 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "customer.php"
+[Method: GET, Route: customer]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('customer.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('customer', [], true)
+ 3 APPPATH\Controllers\Customer.php(19): view('customer', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Customer->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customer))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\customerserver\\public\\index.php')
